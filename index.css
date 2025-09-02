@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@wallet-ui/tailwind/index.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ONLY add background image - don't change core theme colors */
+body {
+  background: 
+    linear-gradient(135deg, rgba(10, 0, 18, 0.85) 0%, rgba(26, 0, 64, 0.75) 20%, rgba(45, 27, 105, 0.65) 40%, rgba(76, 29, 149, 0.55) 60%, rgba(107, 33, 168, 0.45) 80%, rgba(124, 58, 237, 0.35) 100%);
+    /* url('https://amethyst-peaceful-damselfly-293.mypinata.cloud/ipfs/bafybeianqa5y3dhgw3hvx6qhukmkoasvlrt3ltl6gfvyshueb7kh7noj3q'); */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Keep your original theme colors exactly as they were */
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Keep original wallet adapter styling - don't break it */
+.wallet-adapter-button-trigger {
+  height: auto !important;
+  @apply !border !bg-background !shadow-xs hover:!bg-accent !text-accent-foreground hover:!text-accent-foreground dark:!bg-input/30 !border-input/10 dark:!border-input dark:hover:!bg-input/50;
+  @apply !px-2 !py-[6px] !rounded-md !text-sm !font-semibold !shadow-sm !transition-all;
+}
+
+/* ADD-ON: Optional cyberpunk utility classes - only use when explicitly called */
+@layer utilities {
+  /* Use these classes ONLY when you want cyberpunk styling */
+  .cyber-bg {
+    background: rgba(15, 0, 32, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+  }
+  
+  .cyber-text-gradient {
+    background: linear-gradient(45deg, rgb(0, 255, 255), rgb(236, 72, 153), rgb(147, 51, 234));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+  }
+  
+  .cyber-text-cyan {
+    color: rgb(0, 255, 255);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    font-family: "Space Mono", sans-serif;
+  font-weight: 800;
+  font-style: oblique 
+  }
+  .token{
+    border-radius: 15px;
+    border-color:5px solid cyan;
+    padding:50px;
+    background-color: deeppink;
+
+  }
+
+  .title{
+   justify-content: center;
+
+    font-size:xx-large
+  }
+
+  .cyber-text-h1{
+     /* background: linear-gradient(45deg, rgb(0, 255, 255), rgb(236, 72, 153), rgb(147, 51, 234)); */
+
+    /* color: rgb(236, 72, 153); */
+    font-size: xx-large;
+    font-weight: 3000;
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.4);
+    margin-top: 10px;
+     color: rgb(0, 255, 255);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    font-family: "Space Mono", sans-serif;
+  font-weight: 800;
+  font-style: oblique 
+
+
+  }
+
+  .buttons{
+    display:flex;
+    justify-content: space-evenly;
+  }
+  .cyber-text-h2{
+     font-size: large;
+    font-weight: 3000;
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.4);
+    margin-top: 10px;
+     color: rgb(0, 255, 255);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    font-family: "Space Mono", sans-serif;
+  font-weight: 800;
+  font-style: oblique 
+  }
+
+  .cyber-text-pink {
+    background: linear-gradient(45deg, rgb(0, 255, 255), rgb(236, 72, 153), rgb(147, 51, 234));
+
+    /* color: rgb(236, 72, 153); */
+    font-size: large;
+    font-weight: 3000;
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.4);
+  }
+  
+  .cyber-glow {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  }
+  
+  .sq{
+    height:500px;
+    display: flex;
+    flex-direction: row;
+    border: 3px solid cyan;
+    border-radius:10px;
+   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+   margin-bottom: 20px;
+
+  }
+  .bio{
+    height:300px;
+    display:flex;
+    width:80%;
+    margin-left: auto;
+    border-color: yellow;
+    border-radius: 30px;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 15px; */
+    margin:auto;
+    padding:10px;
+     
+  }
+  .par{
+    color:aqua;
+    display:flex;
+    justify-content: center;
+    margin-left:auto;
+    padding:30px;
+   }
+
+  .Auction{
+    display:flex;
+    flex-direction: row;
+    color:cyan;
+    border:5px solid dodgerblue;
+    border-radius:20px;
+    justify-content: center;
+    height: 100px;
+    /* padding:50px; */
+  }
+
+  .countdown{
+    display:flex;
+    justify-content: center;
+      height: max-content;
+      align-items: center;
+      padding:0px;
+      width:100%;
+      /* border:2px solid pink; */
+  }
+  .time{
+    display:flex;
+    flex-direction: column;
+     justify-content: center;
+    width:25%;
+    height:100%;
+    max-width: 25%;
+ 
+  }
+
+    .pic{
+    display:flex;
+    flex-direction: column;
+     justify-content: center;
+     height:90%;
+    max-width: 90%;
+
+  }
+  .pic-text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:fit-content;
+    margin-left:10px;
+    height: fit-content;
+
+  }
+
+  .pic-text-desc{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:fit-content;
+    margin-left:10px;
+    height: fit-content;
+    font-size: x-small;
+    color:cyan;
+
+  }
+  .peice{
+    display:flex;
+    flex-direction: column;
+    width:30%
+  }
+
+   .peices{
+
+    justify-content: center;
+    display:flex;
+    width: 100%;
+    height: 250px;
+    /* border:5px solid cyan; */
+   }
+      .peices-desc{
+    display:flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+    border:5px solid cyan;
+   }
+   .pics{
+    display:flex;
+    flex-direction: row;
+     justify-content: center;
+    width:100%;
+    height:250px;
+    max-width: 25%;
+    justify-content: space-evenly;
+    border: solid green;
+
+
+  }
+  .what{
+    width:100%;
+  }
+  .top{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+     height:150px;
+  
+  }
+  .time-unit{
+    width:100%;
+    height:50%;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+    color: rgb(0, 255, 255);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+     font-size:xx-large;
+     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 800;
+  font-style: oblique 
+    
+   }
+     .time-unit-small{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+    color: rgb(0, 255, 255);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    font-family: "Space Mono", sans-serif;
+    font-size:medium;
+  font-weight: 800;
+  font-style: oblique 
+    
+   }
+     .pic-text{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+    color: rgb(0, 255, 255);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    font-family: "Space Mono", sans-serif;
+    font-size:smaller;
+  font-weight: 800;
+  font-style: oblique 
+    
+   }
+
+   .assets{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    }
+  .boxie{
+    display:flex;
+    width:25%
+  }
+
+  .space-y-2{
+    border:3px solid white;
+  }
+
+  .vril{
+    /* border:3px solid magenta; */
+    height: 1000px;
+    justify-content: center;
+
+  }
+  .blog{
+    margin-left:3px;
+    padding:4px;
+    font-size: var(--muted-foreground);
+  }
+ 
+     .img-container {
+           display:flex;
+            width: 30%;
+            height: auto;
+            border :2px solid rgb(21, 10, 61); 
+            font-family: Ireon CyberPunk Demo;
+        }
+        
+
+        }
+ 
+  .cyber-button {
+    background: linear-gradient(45deg, rgb(147, 51, 234), rgb(0, 0, 0));
+    color: cyan;
+    border: 2px solid cyan;
+    display:flex;
+    font-weight: 600;
+    font-size:small;
+    padding: 5px;
+    justify-content: center;
+    border-radius:15px;
+    align-content: center;
+    
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+
+
+  .gallery-button{
+    border:3px solid cyan;
+   background: linear-gradient(45deg, rgb(147, 51, 234), rgb(0, 0, 0));
+    color:cyan;
+    border-radius: 10px;
+    padding:5px;
+    font-size: small;
+margin-right: 20px;   }
+
+  .pic {
+    border:2px solid cyan;
+    border-radius: 10px;
+    display: flex;
+    width:100%;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+ 
+  .cyber-button:hover {
+    box-shadow: 0 0 75px rgba(236, 72, 153, 0.4);
+    transform: translateY(-2px);
+  }
+.container{
+    display: 'flex';
+    flex-direction: column;
+  }
