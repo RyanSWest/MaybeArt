@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Metaplex, keypairIdentity,  irysStorage  } from "@metaplex-foundation/js";
 import { Connection, clusterApiUrl, Keypair } from "@solana/web3.js";
+import Rhino from '../imgs/RHINOGUN.jpg'
+import Gorilla from '../imgs/Gorilla1.jpg'
+import Drag from '../imgs/Dragon2.jpg'
 
 function Page() {
   const [isUploading, setIsUploading] = useState(false);
@@ -83,9 +86,52 @@ function Page() {
 
   return (
     <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-      <h1>Dashboard</h1>
+      <h1 className ='cyber-text-h1'>Gallery</h1>
       
       <section>
+
+
+
+
+
+         <div>  
+
+         <div className='time'> 
+                <img
+       className ='pic'
+       
+      //  src ='https://www.instagram.com/p/BhS5gc8nYXz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D'/>
+
+          src ='https://images.nightcafe.studio/ik-seo/jobs/oBLDwBFxM2XVyEt1m2i7/oBLDwBFxM2XVyEt1m2i7--1--4xbzq/giant-green-tiger-with-futuristic-girl-with-machine-gun-fighting-a-horde-of-zombies-postapocalyptic-.jpg?tr=w-1600,c-at_max'/>
+              </div>
+
+                <div className='time'> 
+                <img
+       className ='pic'
+       
+       src ='https://images.nightcafe.studio/jobs/S9UynfQA5zJeZoz1JiQ9/S9UynfQA5zJeZoz1JiQ9--0--brwp2.jpg?tr=w-1600,c-at_max'/>
+
+
+              </div>
+              <div className ='time'>
+               <img 
+                className ='pic'
+                // src ='https://images.nightcafe.studio/ik-seo/jobs/m9nH0Ue0KMjqkqmx2g3V/m9nH0Ue0KMjqkqmx2g3V--1--tvzzh/ehonda-with-giant-sushi.jpg?tr=w-1600,c-at_max'/>
+                src ='https://images.nightcafe.studio/ik-seo/jobs/DCDMgSGLULLI1Z2ttpC2/DCDMgSGLULLI1Z2ttpC2--1--l2n82/geisha-girls-sitting-in-giant-bowl-of-ramen.jpg?tr=w-1600,c-at_max'/>
+              </div>
+
+              <div className ='time'>
+               <img 
+                className ='pic'
+                // src ='https://images.nightcafe.studio/ik-seo/jobs/m9nH0Ue0KMjqkqmx2g3V/m9nH0Ue0KMjqkqmx2g3V--1--tvzzh/ehonda-with-giant-sushi.jpg?tr=w-1600,c-at_max'/>
+                src ='https://images.nightcafe.studio/ik-seo/jobs/DCDMgSGLULLI1Z2ttpC2/DCDMgSGLULLI1Z2ttpC2--1--l2n82/geisha-girls-sitting-in-giant-bowl-of-ramen.jpg?tr=w-1600,c-at_max'/>
+              </div>
+
+
+
+
+              </div>
+         
         <h2>NFT Minter</h2>
         
         <button 

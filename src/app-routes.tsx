@@ -8,8 +8,8 @@ const AccountIndexFeature = lazy(() => import('@/components/account/account-feat
 const CrudstuffFeature = lazy(() => import('@/components/crudstuff/crudstuff-feature'))
 const DashboardFeature = lazy(() => import('@/components/dashboard/dashboard-feature'))
 // const Page =lazy(()=> import('@components/crudstuff/page' ))
-// const Page = lazy(() => import('@/components/crudstuff/page'))
-const Gallery = lazy(()=> import('./components/functions/gallery'))
+const Page = lazy(() => import('@/components/crudstuff/page'))
+const Gallery = lazy(()=> import('@/components/functions/gallery'))
 // const Uploader = lazy(() => import('@/components/functions/Uploader'))
 const Udog = lazy(() => import('@/components/functions/Udog'))
 const NFTMinter= lazy(() => import('@/components/functions/Dash'))
@@ -46,9 +46,9 @@ export function AppRoutes() {
       element: <NFTMinter/>
     },
     {path:'gallery',
-      element:<Gallery/>
+      element: <Page/>
     },
-     {
+    {
       path: 'about',
       element: <About/>
     },

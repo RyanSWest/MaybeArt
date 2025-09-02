@@ -11,8 +11,17 @@ const  Gallery=()=> {
   const [img,setImg]=useState<any>( [])
   const[nftImg,setNftImg]=useState<any>()
   const[url,setUrl]=useState<string>()
+ const [stuff,setStuff]=useState<any<([])
 
 
+ async function getAI(){
+
+    axios.get('https://creator.nightcafe.studio/my-creations')
+    .then((res)=>console.log("XXX",res.data))
+
+
+ }
+ getAI()
   // Method 1: Using Metaplex SDK (recommended)
  async function createUrl2() {
     let res: string = '';
@@ -273,16 +282,11 @@ console.log('YOBITCH',img)
 return (
     <div>
    <h1>Hey Fags</h1> 
-
+<h1> HEY HHH</h1>
 
  <span>{nftImg}</span>
-
-     <img 
-          src={nftImg} 
-          alt="NFT Preview" 
-          style={{ maxWidth: "800px", borderRadius: "8px solid:red" }}
-        /> 
-   <img 
+ 
+   {/* <img 
           src={Nftimg} 
           alt="NFT Preview" 
           style={{ maxWidth: "800px", borderRadius: "8px solid:red" }}
@@ -294,11 +298,11 @@ return (
           
          {img.map((item: any, index: number) => (
     <img key={index} src={item.imageUrl} alt="art" />
-))}
+))} */}
 
            
 
-    // </div>
+     </div>
 )
 
 }
