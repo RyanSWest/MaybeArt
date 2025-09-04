@@ -240,6 +240,70 @@ body {
    margin-bottom: 20px;
 
   }
+
+
+
+
+
+  .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-wrapper {
+  /* Individual image containers */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.image-card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 80%;
+  display: block;
+}
+
+.image-text {
+  padding: 20px;
+  text-align: center;
+  background-color: navy;
+}
+
+.image-text h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.image-text p {
+  margin: 0;
+  color: #e9e4e4;
+  line-height: 1.4;
+}
   .bio{
     height:300px;
     display:flex;
@@ -247,7 +311,7 @@ body {
     margin-left: auto;
     border-color: yellow;
     border-radius: 30px;
-    font-size: larger;
+    font-size: large;
     align-items: center;
     justify-content: center;
     /* margin-top: 15px; */
@@ -294,20 +358,17 @@ body {
   }
 
     .pic{
-    display:flex;
-    flex-direction: column;
-     justify-content: center;
-     height:90%;
-    max-width: 90%;
+    width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
 
   }
   .pic-text{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width:fit-content;
-    margin-left:10px;
-    height: fit-content;
+     width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 
   }
 
@@ -329,12 +390,11 @@ body {
   }
 
    .peices{
-
-    justify-content: center;
-    display:flex;
-    width: 100%;
-    height: 250px;
-    /* border:5px solid cyan; */
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:10%;
+  padding: 20
+   
    }
       .peices-desc{
     display:flex;
@@ -346,15 +406,18 @@ body {
     border:5px solid cyan;
    }
    .pics{
-    display:flex;
+    /* display:flex;
     flex-direction: row;
      justify-content: center;
     width:100%;
     height:250px;
     max-width: 25%;
     justify-content: space-evenly;
-    border: solid green;
-
+    border: solid green; */
+    border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 
   }
   .what{
