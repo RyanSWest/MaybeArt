@@ -19,6 +19,7 @@ import Drag2 from '../imgs/Dragon2.jpg';
 import Rodan from '../imgs/Rodan3.jpg';
 import Drag3 from '../imgs/DragonSP1.jpg'
 import Bear from '../imgs/Bear6.jpg'
+import Kaiju from '../imgs/kaiju2.jpg'
 
  export default function DashboardFeature() {
 
@@ -122,7 +123,7 @@ import Bear from '../imgs/Bear6.jpg'
 
           <h1 className='time-unit'>
             {minutes} :
-
+ 
             </h1>  
             <h1 className='time-unit-small'>
              MIN
@@ -254,7 +255,7 @@ import Bear from '../imgs/Bear6.jpg'
 
            
           <div className='assets'> 
-                <h2  className ='cyber-text-h2'font-family= 'Space Mono'>
+                <h2  className ='cyber-text-h1'font-family= 'Space Mono'>
                  BROWSE ASSETS</h2>
              <button className='gallery-button'> 
                     Gallery
@@ -294,7 +295,7 @@ import Bear from '../imgs/Bear6.jpg'
   </div>
 
   <div className="image-wrapper">
-    <img src={Rath} alt="Art 3"/>
+    <img src={Kaiju} alt="Art 3"/>
   </div>
  
 </div>
