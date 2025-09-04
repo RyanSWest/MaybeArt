@@ -206,7 +206,7 @@ body {
     justify-content: space-evenly;
   }
   .cyber-text-h2{
-     font-size: large;
+     font-size: x-large;
     font-weight: 3000;
     text-shadow: 0 0 10px rgba(236, 72, 153, 0.4);
     margin-top: 10px;
@@ -240,6 +240,90 @@ body {
    margin-bottom: 20px;
 
   }
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.peices{
+ display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px;
+
+
+}
+
+
+  .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  border:4px dotted magenta;
+}
+
+.image-wrapper {
+  /* Individual image containers */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 250px;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+.image-card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 80%;
+  display: block;
+}
+
+.image-text {
+  padding: 20px;
+  text-align: center;
+  background-color: navy;
+}
+
+.image-text h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.image-text p {
+  margin: 0;
+  color: #e9e4e4;
+  line-height: 1.4;
+}
   .bio{
     height:300px;
     display:flex;
@@ -247,7 +331,7 @@ body {
     margin-left: auto;
     border-color: yellow;
     border-radius: 30px;
-    font-size: larger;
+    font-size: large;
     align-items: center;
     justify-content: center;
     /* margin-top: 15px; */
@@ -277,9 +361,9 @@ body {
   .countdown{
     display:flex;
     justify-content: center;
-      height: max-content;
+      height: 15%;
       align-items: center;
-      padding:0px;
+      padding:10px;
       width:100%;
       /* border:2px solid pink; */
   }
@@ -292,71 +376,12 @@ body {
     max-width: 25%;
  
   }
+ 
+ 
 
-    .pic{
-    display:flex;
-    flex-direction: column;
-     justify-content: center;
-     height:90%;
-    max-width: 90%;
-
-  }
-  .pic-text{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width:fit-content;
-    margin-left:10px;
-    height: fit-content;
-
-  }
-
-  .pic-text-desc{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width:fit-content;
-    margin-left:10px;
-    height: fit-content;
-    font-size: x-small;
-    color:cyan;
-
-  }
-  .peice{
-    display:flex;
-    flex-direction: column;
-    width:30%
-  }
-
-   .peices{
-
-    justify-content: center;
-    display:flex;
-    width: 100%;
-    height: 250px;
-    /* border:5px solid cyan; */
-   }
-      .peices-desc{
-    display:flex;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-direction: row;
-    width: 100%;
-    height: 75px;
-    border:5px solid cyan;
-   }
-   .pics{
-    display:flex;
-    flex-direction: row;
-     justify-content: center;
-    width:100%;
-    height:250px;
-    max-width: 25%;
-    justify-content: space-evenly;
-    border: solid green;
-
-
-  }
+   
+ 
+   
   .what{
     width:100%;
   }
@@ -396,30 +421,16 @@ body {
   font-style: oblique 
     
    }
-     .pic-text{
-    width:100%;
-    display: flex;
-    justify-content: center;
-    height: max-content;
-    color: rgb(0, 255, 255);
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
-    font-family: "Space Mono", sans-serif;
-    font-size:smaller;
-  font-weight: 800;
-  font-style: oblique 
-    
-   }
+   
 
    .assets{
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding:10px;
+    height: 200px;
     }
-  .boxie{
-    display:flex;
-    width:25%
-  }
+  
 
   .space-y-2{
     border:3px solid white;
@@ -475,14 +486,7 @@ body {
     font-size: small;
 margin-right: 20px;   }
 
-  .pic {
-    border:2px solid cyan;
-    border-radius: 10px;
-    display: flex;
-    width:100%;
-    margin-right: 5px;
-    margin-left: 5px;
-  }
+ 
  
   .cyber-button:hover {
     box-shadow: 0 0 75px rgba(236, 72, 153, 0.4);

@@ -9,12 +9,19 @@ import { Link, useLocation } from 'react-router';
 import Vitamin from '../imgs/Vitamin.jpg'
 import Cover from '../imgs/Cover.jpg'
 import Diego2 from '../imgs/Diego2.jpg'
-import Rhino from'../imgs/RHINOGUN.jpg'
+import Rhino from'../imgs/RHINOGUN9.jpg'
 import Gorilla from '../imgs/Gorilla1.jpg'
-import Drag from '../imgs/Dragon2.jpg'
+import Drag from '../imgs/COLORED DRAGON13.jpg'
+import Chimp from '../imgs/Chimp2.jpg'
+import Rath from'../imgs/RathScreenshot.png';
+import AngryGorr from '../imgs/Gorilla-MAD11.jpg';
+import Drag2 from '../imgs/Dragon2.jpg'; 
+import Rodan from '../imgs/Rodan3.jpg';
+import Drag3 from '../imgs/DragonSP1.jpg'
+import Bear from '../imgs/Bear6.jpg'
+import Kaiju from '../imgs/kaiju2.jpg'
 
-// import {Vitamin.jpg} from '../imgs'
-export default function DashboardFeature() {
+ export default function DashboardFeature() {
 
   const [pics, setPics]=useState([])
 
@@ -116,7 +123,7 @@ export default function DashboardFeature() {
 
           <h1 className='time-unit'>
             {minutes} :
-
+ 
             </h1>  
             <h1 className='time-unit-small'>
              MIN
@@ -154,53 +161,63 @@ export default function DashboardFeature() {
 
            <div className='peices'> 
             {/* <div  >  */}
+            
  
-             <div className= 'time'> 
+             <div className= 'image-card'> 
 
               <img
-             className ='pic'
+           
              
-            //  src='https://drive.google.com/file/d/16APBJqQkTqRNonenb9vvJ5A0t-7z2Kr9/viewe84a1-76ec-4191-b042-5195245d8af9/DSC01299.jpg?format=2500w'/>
-          // src = 'https://drive.google.com/file/d/16APBJqQkTqRNonenb9vvJ5A0t-7z2Kr9/view'/>
+             
                 src =  {Vitamin} alt='WF'/> 
-                       <h2 className='pic-text'>VITAMIN LIVE RECORDING</h2>
-                                              <p className='pic-text-desc'>John Butlers first Recording!</p>
 
 
+                <div className='image-text'> 
+                    <h2 >VITAMIN LIVE RECORDING</h2>
+                                              <p >John Butlers first Recording!</p>
 
 
-             </div>
-
-             <div className= 'time'> 
-
-              <img
-             className ='pic'
-             
-            //  src='https://images.squarespace-cdn.com/content/v1/632a11da57625f0c11cfd0c9/e46e84a1-76ec-4191-b042-5195245d8af9/DSC01299.jpg?format=2500w'/>
-         src ={Cover}/>
-                
-                       <h2 className='pic-text'>VITAMIN RECORDING</h2>
-
-                       <p className='pic-text-desc'>John Butlers first Recording!</p>
-
+                </div>
+                        
 
 
 
              </div>
 
-
-             <div className= 'time'> 
+             <div className= 'image-card'> 
 
               <img
-             className ='pic'
              
-            //  src='https://images.squarespace-cdn.com/content/v1/632a11da57625f0c11cfd0c9/e46e84a1-76ec-4191-b042-5195245d8af9/DSC01299.jpg?format=2500w'/>
-                   src ={Diego2}/>
+             
+          src ={Cover}/>
                 
-                       <h2 className='pic-text'>TOP MUSIC AND ART</h2>
-                                               <p className='pic-text-desc'> Kalu James, Diego Rivera,  and More</p>
+                <div className ='image-text'> 
+                                        <h2 >VITAMIN RECORDING</h2>
+                                             <p>John Butlers first Recording!</p>
 
-                     
+
+                </div>
+                        
+
+
+
+             </div>
+
+
+             <div className= 'image-card'> 
+
+              <img
+             
+             
+                    src ={Diego2}/>
+
+                 
+                     <div className='image-text'> 
+
+               <h2 >TOP MUSIC AND ART</h2>
+                                               <p  > Kalu James, Diego Rivera,  and More</p>
+
+                     </div>
 
 
              </div>
@@ -238,91 +255,72 @@ export default function DashboardFeature() {
 
            
           <div className='assets'> 
-                <h2  className ='cyber-text-h2'font-family= 'Space Mono'>
+                <h2  className ='cyber-text-h1'font-family= 'Space Mono'>
                  BROWSE ASSETS</h2>
              <button className='gallery-button'> 
                     Gallery
                   </button>
                   
             </div>
-            <div className ='peices'> 
-              <div className='time'> 
-                <img
-       className ='pic'
+             
+
+
+     <div className="gallery-container">
+  <div className="image-wrapper">
+    <img src= {Drag} alt="Art 1"/>
+  </div>
+  <div className="image-wrapper">
+    <img src= {Rodan} alt="Art 2"/>
+  </div>
+  <div className="image-wrapper">
+    <img src={Rhino} alt="Art 3"/>
+  </div> 
+  <div className="image-wrapper">
+    <img src={Gorilla} alt="Art 3"/>
+  </div>
+  <div className="image-wrapper">
+    <img src={AngryGorr} alt="Art 3"/>
+  </div>
+  <div className="image-wrapper">
+    <img src={Drag3} alt="Art 3"/>
+  </div>
+  <div className="image-wrapper">
+    <img src={Chimp} alt="Art 3"/>
+  </div>
+  <div className="image-wrapper">
+    <img src={Rath} alt="Art 3"/>
+  </div>
+  <div className="image-wrapper">
+    <img src={Bear} alt="Art 3"/>
+  </div>
+
+  <div className="image-wrapper">
+    <img src={Kaiju} alt="Art 3"/>
+  </div>
+ 
+</div>
+  </div>
+
+ 
+
+   </div>
+
+
+
+
+ 
+
+
+
        
-      //  src ='https://www.instagram.com/p/BhS5gc8nYXz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D'/>
-
-          src ='https://images.nightcafe.studio/ik-seo/jobs/oBLDwBFxM2XVyEt1m2i7/oBLDwBFxM2XVyEt1m2i7--1--4xbzq/giant-green-tiger-with-futuristic-girl-with-machine-gun-fighting-a-horde-of-zombies-postapocalyptic-.jpg?tr=w-1600,c-at_max'/>
-              </div>
-
-                <div className='time'> 
-                <img
-       className ='pic'
-       
-       src ='https://images.nightcafe.studio/jobs/S9UynfQA5zJeZoz1JiQ9/S9UynfQA5zJeZoz1JiQ9--0--brwp2.jpg?tr=w-1600,c-at_max'/>
+ 
 
 
-              </div>
-
-              <div className ='time'> 
-
-
-                <img 
-                className= 'pic'
-                src ='https://images.nightcafe.studio/ik-seo/jobs/m9nH0Ue0KMjqkqmx2g3V/m9nH0Ue0KMjqkqmx2g3V--1--tvzzh/ehonda-with-giant-sushi.jpg?tr=w-1600,c-at_max'/>
-              </div>
-
-              <div className ='time'> 
-
-
-                <img 
-                className ='pic'
-                // src ='https://images.nightcafe.studio/ik-seo/jobs/m9nH0Ue0KMjqkqmx2g3V/m9nH0Ue0KMjqkqmx2g3V--1--tvzzh/ehonda-with-giant-sushi.jpg?tr=w-1600,c-at_max'/>
-                src ='https://images.nightcafe.studio/ik-seo/jobs/DCDMgSGLULLI1Z2ttpC2/DCDMgSGLULLI1Z2ttpC2--1--l2n82/geisha-girls-sitting-in-giant-bowl-of-ramen.jpg?tr=w-1600,c-at_max'/>
-              </div>
-               
-                <div className ='time'> 
-          <img className='pic' 
-             src={Gorilla}/>
+ 
 
 
 
-
-        </div>
-
-
-
-                 
-                 </div>
-          
-         
-      </div>
-      {/* <div className= 'peices'> 
-        <div className ='time'> 
-          <img className='pic' 
-             src={Drag}/>
-
-
-
-
-        </div>
-
- <div className ='time'> 
-          <img className='pic' 
-             src={Gorilla}/>
-
-
-
-
-        </div>
-         <div className ='time'> 
-          <img className='pic' 
-             src={Rhino}/>
-
-
-
-
-        </div> */}
+ 
 
 
 
@@ -331,8 +329,6 @@ export default function DashboardFeature() {
 
 
 
-{/* 
-      </div> */}
-    </div>
+  
   )
 }
