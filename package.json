@@ -14,10 +14,13 @@
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "node server.js",
+   
     "dev:full": "concurrently \"npm run server\" \"npm run dev\"",
     "setup": "npm run anchor keys sync && npm run codama:js"
   },
+
+  
+ 
   "description": "React+Vite, Tailwind, gill (based on @solana/kit), crudstuff Anchor example, Wallet UI",
   "keywords": [
     "anchor-crudstuff",

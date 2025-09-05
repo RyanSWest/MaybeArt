@@ -2,11 +2,8 @@
 //ts-ignore
 
 import{useState, useEffect} from 'react'
-import {main} from '../functions/list-files';
-// import {useState, useEffect} from 'react'
-import { Link, useLocation } from 'react-router';
-// import * as Logo from'../imgs/Vitamin.jpg'
-import Vitamin from '../imgs/Vitamin.jpg'
+ import { Link, useLocation } from 'react-router';
+ import Vitamin from '../imgs/Vitamin.jpg'
 import Cover from '../imgs/Cover.jpg'
 import Diego2 from '../imgs/Diego2.jpg'
 import Rhino from'../imgs/RHINOGUN9.jpg'
@@ -23,13 +20,8 @@ import Kaiju from '../imgs/kaiju2.jpg'
 
  export default function DashboardFeature() {
 
-  const [pics, setPics]=useState([])
-
-  useEffect(()=>{
  
-    console.log ("=>",main())
-
-  },[])
+  
 
   
   var now = new Date().getTime();

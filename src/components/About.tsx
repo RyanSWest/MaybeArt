@@ -8,8 +8,7 @@ const About = ()=>{
 
 // const CFO= 'https://amethyst-peaceful-damselfly-293.mypinata.cloud/ipfs/bafkreifaojbhsgbjxxa7tgunnld2bb4pl3bqej7pathv6hdyes45it7qv4'
    
-const Ozz='https://amethyst-peaceful-damselfly-293.mypinata.cloud/ipfs/bafkreiaxwwvtjgpshkk662lu7quh5bwhe6qszumxshlgpgjuc5upq56eiq'
-
+ 
 return (
 
 

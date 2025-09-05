@@ -1,15 +1,17 @@
 import { useNavigate, useRoutes } from 'react-router'
 import { lazy } from 'react'
-import { NftBuildersClient } from '@metaplex-foundation/js'
+// import { NftBuildersClient } from '@metaplex-foundation/js'
 // import {About} from './components/About'
+//ts-ignore
 
+//ts-nocheck
 const AccountDetailFeature = lazy(() => import('@/components/account/account-feature-detail.tsx'))
 const AccountIndexFeature = lazy(() => import('@/components/account/account-feature-index.tsx'))
 const CrudstuffFeature = lazy(() => import('@/components/crudstuff/crudstuff-feature'))
 const DashboardFeature = lazy(() => import('@/components/dashboard/dashboard-feature'))
 // const Page =lazy(()=> import('@components/crudstuff/page' ))
 const Page = lazy(() => import('@/components/crudstuff/page'))
-const Gallery = lazy(()=> import('@/components/functions/gallery'))
+// const Gallery = lazy(()=> import('@/components/functions/gallery'))
 // const Uploader = lazy(() => import('@/components/functions/Uploader'))
 const Udog = lazy(() => import('@/components/functions/Udog'))
 const NFTMinter= lazy(() => import('@/components/functions/Dash'))
